@@ -24,3 +24,12 @@ class FalseClass
     self
   end
 end
+
+##
+# Implementing to_bool operation that returns self
+#
+class NilClass
+  def to_bool
+    self
+  end
+end
