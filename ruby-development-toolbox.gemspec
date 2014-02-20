@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/ruby-development-toolbox.rb",
     "lib/toolbox/boolean.rb",
+    "ruby-development-toolbox.gemspec",
     "test/helper.rb",
     "test/test_ruby-development-toolbox.rb"
   ]
