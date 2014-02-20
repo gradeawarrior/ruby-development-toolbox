@@ -2,15 +2,41 @@
 
 A collection of useful utilities and libraries for Ruby development (not Rails)
 
-## Contributing to ruby-development-toolbox
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+## Installation
+
+The toolset can be installed via:
+
+	gem install ruby-development-toolbox
+	
+## Usage
+
+Most modules in the toolbox extend on base Ruby classes to provide additional (or missing) features. For example, the `toolbox/boolean` module provides a `to_bool` operation to:
+
+1. `String`
+2. `FalseClass`
+3. `TrueClass`
+4. and `NilClass`
+
+This is to support operations like the following:
+
+	$ irb
+	2.0.0-p353 :001 > require 'toolbox/boolean'
+ 	 => true
+	2.0.0-p353 :002 > "true".to_bool
+	 => true 
+	2.0.0-p353 :003 > "TRUE".to_bool	
+	 => true
+	2.0.0-p353 :004 > "False".to_bool
+	 => false
+	2.0.0-p353 :005 > false.to_bool
+	 => false
+	2.0.0-p353 :006 > nil.to_bool
+	 => nil
+	
+
+## Documentation
+
+The projects homepage can be found [here](https://github.com/gradeawarrior/ruby-development-toolbox). You can also refer to the [Rubydoc YARD Server](http://rubydoc.info/github/gradeawarrior/ruby-development-toolbox/frames)
 
 # Development
 
@@ -53,6 +79,16 @@ Do note that discovering what files to include in the gem is written around git.
 At last, it's time to ship it! Make sure you have everything committed and pushed, then go wild:
 
 	$ rake release
+
+# Contributing to ruby-development-toolbox
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 # Copyright
 
