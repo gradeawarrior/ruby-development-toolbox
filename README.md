@@ -40,7 +40,7 @@ The projects homepage can be found [here](https://github.com/gradeawarrior/ruby-
 
 # Development
 
-The project is built by [jeweler](https://github.com/technicalpickles/jeweler). See the project's page for more details about how to manage this gem. However, I will list out quick quidance on a typical release.
+The project is built by [jeweler](https://github.com/technicalpickles/jeweler). See the project's page for more details about how to manage this gem. However, I will list out quick guidance on a typical release.
 
 ## Active Gem Development
 
