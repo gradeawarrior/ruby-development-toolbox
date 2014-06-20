@@ -9,6 +9,12 @@ class String
 
 end
 
+class Integer
+  def is_i?
+    true
+  end
+end
+
 module Toolbox
 
   ##

@@ -15,6 +15,10 @@ class TestToolboxInteger < Test::Unit::TestCase
     end
   end
 
+  should 'An actual Integer.to_i should return true' do
+    assert_equal true, 1.is_i?
+  end
+
   should 'String is a double value' do
     ['1.0', '-1.0', '3.1415'].each do |double|
       assert_equal false, double.is_i?
@@ -26,4 +30,5 @@ class TestToolboxInteger < Test::Unit::TestCase
       assert_equal false, string.is_i?
     end
   end
+
 end
