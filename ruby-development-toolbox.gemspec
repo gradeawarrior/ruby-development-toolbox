@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Peter Salas"]
-  s.date = "2014-04-30"
+  s.date = "2014-06-21"
   s.description = "A collection of useful utilities and libraries for Ruby development (not Rails)"
   s.email = "psalas+github@gmail.com"
   s.extra_rdoc_files = [
@@ -33,10 +33,12 @@ Gem::Specification.new do |s|
     "lib/toolbox/gem_specification.rb",
     "lib/toolbox/hash_diff.rb",
     "lib/toolbox/integer.rb",
+    "lib/toolbox/json.rb",
     "lib/toolbox/uuid.rb",
     "ruby-development-toolbox.gemspec",
     "test/helper.rb",
-    "test/test_toolbox-integer.rb"
+    "test/test_toolbox-integer.rb",
+    "test/test_toolbox_json.rb"
   ]
   s.homepage = "http://github.com/gradeawarrior/ruby-development-toolbox"
   s.licenses = ["MIT"]
