@@ -19,15 +19,19 @@ module Gem
   end
 end
 
-##
-# Extends the functionality of a Gem::Specification to be able to retrieve the latest version of gems
-# currently on your system.
-#
-# == Usage
-#
-#     Gem::Specification.latest_versions.each do |spec|
-#       puts "#{spec.name} (#{spec.version})"
-#     end
-#
-module GemSpecification
+module Toolbox
+
+  ##
+  # Extends the functionality of a Gem::Specification to be able to retrieve the latest version of gems
+  # currently on your system.
+  #
+  # == Usage
+  #
+  #     Gem::Specification.latest_versions.each do |spec|
+  #       puts "#{spec.name} (#{spec.version})"
+  #     end
+  #
+  module GemSpecification
+  end
+
 end

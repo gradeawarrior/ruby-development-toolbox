@@ -121,33 +121,37 @@ class Hash
   end
 end
 
-##
-# Extends the functionality of a Hash to be able to perform (i) diff and (ii) similarity operations
-# For implementation details, see the Hash class for the extended functions
-#
-# == Usage
-#
-# Working with HashDiff module can be very simple, for example:
-#
-#     require 'toolbox/hash_diff'
-#     require 'yaml'
-#
-#     hash1 = {
-#       :foo => 'bar',
-#       :bar => 'hello',
-#       :hello => 'world',
-#       :this => { :exists => 'yay!' }
-#     }
-#
-#     hash2 = {
-#       :foo => 'bar',
-#       :hello => 'Hi',
-#       :this => { :exists => 'yay!' },
-#       :hey => { :this => "Doesn't exist", :but => "oh well" }
-#     }
-#
-#     puts hash1.diff(hash2).to_yaml
-#     puts hash1.similarity(hash2).to_yaml
-#
-module HashDiff
+module Toolbox
+
+  ##
+  # Extends the functionality of a Hash to be able to perform (i) diff and (ii) similarity operations
+  # For implementation details, see the Hash class for the extended functions
+  #
+  # == Usage
+  #
+  # Working with HashDiff module can be very simple, for example:
+  #
+  #     require 'toolbox/hash_diff'
+  #     require 'yaml'
+  #
+  #     hash1 = {
+  #       :foo => 'bar',
+  #       :bar => 'hello',
+  #       :hello => 'world',
+  #       :this => { :exists => 'yay!' }
+  #     }
+  #
+  #     hash2 = {
+  #       :foo => 'bar',
+  #       :hello => 'Hi',
+  #       :this => { :exists => 'yay!' },
+  #       :hey => { :this => "Doesn't exist", :but => "oh well" }
+  #     }
+  #
+  #     puts hash1.diff(hash2).to_yaml
+  #     puts hash1.similarity(hash2).to_yaml
+  #
+  module HashDiff
+  end
+
 end
