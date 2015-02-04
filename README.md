@@ -38,6 +38,66 @@ This is to support operations like the following:
 
 The projects homepage can be found [here](https://github.com/gradeawarrior/ruby-development-toolbox). You can also refer to the [Rubydoc YARD Server](http://rubydoc.info/github/gradeawarrior/ruby-development-toolbox/frames)
 
+In summary, the following modules are available currently in this gem:
+
+### 1. toolbox/array
+
+This is to implement equivalence check for arrays. In the context of arrays, we use =~ as a means of checking if array1 is contained in array2; or if object is contained in array1
+  
+### 2. toolbox/boolean
+
+The main application of the Boolean module is to support reading boolean values from a String (e.g. while reading a configuration value) and having the ability to convert it back to a boolean true/false for easier evaluation in your Ruby code
+
+### 3. toolbox/gem_specification
+
+Extends the functionality of a Gem::Specification to be able to retrieve the latest version of gems currently on your system.
+
+### 4. toolbox/hash_diff
+
+Extends the functionality of a Hash to be able to perform (i) diff and (ii) similarity operations. For implementation details, see the Hash class for the extended functions
+
+### 5. toolbox/http
+
+A simple testing client based on the Perl version found in: [QA-Perl-Lib.git](https://github.com/gradeawarrior/QA-Perl-Lib/blob/master/QA/Test/WebService.pm)
+  
+An example usage would be the following:
+
+       require 'toolbox/http'
+  
+       response = Toolbox::Http.request(:method => 'GET', :url => 'http://www.google.com')
+       if response.code == 200.to_s
+         puts "Yay! It worked!"
+       else
+         puts "Boo! Something broke!" unless response.code == 200.to_s
+       end
+
+### 6. toolbox/integer
+
+Extends the functionality of String to support checking if a String can be converted to an Integer
+
+       require 'toolbox/integer'
+       
+       ['-1', '0', '1', '1.0', 'one', '1 too many'].each do |test|
+         puts "This can be converted to an Integer" if test.is_i?
+         puts "This cannot be converted to an Integer" unless test.is_i?
+       end
+
+### 7. toolbox/json
+
+Extends the functionality of String to support pretty_printing json. This is really a natural extension of the basic String type to support JSON.pretty_generate(string).
+
+### 8. toolbox/uuid
+
+A generic UUID class:
+
+		$ irb
+		     require 'toolbox/uuid'
+		       => true
+		     UUID.generate
+		       => "0a391631-22ba-40ea-af2e-65a64de4a42b"
+		     UUID.generate
+		       => "092516ba-a2f4-45cf-9e1d-c5e63342aaa4"
+
 # Development
 
 The project is built by [jeweler](https://github.com/technicalpickles/jeweler). See the project's page for more details about how to manage this gem. However, I will list out quick guidance on a typical release.

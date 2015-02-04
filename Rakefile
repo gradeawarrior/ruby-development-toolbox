@@ -2,6 +2,9 @@
 
 require 'rubygems'
 require 'bundler'
+require 'rake'
+require 'jeweler'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -9,9 +12,7 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
 
-require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "ruby-development-toolbox"
